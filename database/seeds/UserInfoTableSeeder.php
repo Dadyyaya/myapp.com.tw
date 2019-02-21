@@ -11,7 +11,15 @@ class UserInfoTableSeeder extends Seeder
      */
     public function run()
     {
-        // TODO: factoy有建立完整，就可以直接create資料
-        factory(App\UserInfo::class, 1000)->create();
+        /**
+         * TODO: user info的user_id必須與user關連，所以要改成以下
+         * 先取得所有users，再利用foreach 去塞入user info
+         */
+        $users = \App\User::all();
+        foreach ($users as $user){
+            factory(App\UserInfo::class, 1000)->create([
+                'user_id' => $user->id,
+            ]);
+        }
     }
 }
