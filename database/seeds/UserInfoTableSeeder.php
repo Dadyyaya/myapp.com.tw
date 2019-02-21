@@ -1,0 +1,18 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class UserInfoTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        factory(App\UserInfo::class 10)->create()->each(function) ($u) {
+            $u->post()-<save(factory(App\post::class)->make());
+        }
+    }
+}

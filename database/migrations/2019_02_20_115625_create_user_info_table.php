@@ -14,8 +14,8 @@ class CreateUserInfoTable extends Migration
     public function up()
     {
         Schema::create('user_info', function (Blueprint $table) {
-            $table->integer('id', 11);
-            $table->integer('user_id', 11);
+            $table->integer('id');
+            $table->integer('user_id');
             $table->string('name', 150)->nullable();
             $table->string('address', 150)->nullable();
             $table->string('mobile', 100)->nullable();
