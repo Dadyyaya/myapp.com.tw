@@ -17,7 +17,7 @@ class UserInfoTableSeeder extends Seeder
          */
         $users = \App\User::all();
         foreach ($users as $user){
-            factory(App\UserInfo::class, 1000)->create([
+            factory(App\UserInfo::class)->create([
                 'user_id' => $user->id,
             ]);
         }

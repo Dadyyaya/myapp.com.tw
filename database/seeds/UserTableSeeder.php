@@ -12,6 +12,6 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         // TODO: factoy有建立完整，就可以直接create資料
-        factory(App\UserInfo::class, 50)->create();
+        factory(App\User::class, 50)->create();
     }
 }
