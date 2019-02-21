@@ -11,8 +11,7 @@ class UserInfoTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\UserInfo::class, 10)->create()->each(function ($u) {
-            $u->post()->save(factory(App\post::class)->make());
-        });
+        // TODO: factoy有建立完整，就可以直接create資料
+        factory(App\UserInfo::class, 1000)->create();
     }
 }
