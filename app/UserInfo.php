@@ -18,4 +18,8 @@ class UserInfo extends Model
         'address',
         'mobile',
     ];
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }
