@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = App\User::all();
+        $users = App\UserInfo::all();
 
         foreach ($users as $user) {
             echo $user;
