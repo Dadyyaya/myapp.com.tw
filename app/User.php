@@ -31,8 +31,8 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    public function UserInfo()
+    public function userInfo()
     {
-        return $this->hasOne('App\UserInfo', 'foregin_key', 'local_key');
+        return $this->hasOne('App\UserInfo', 'user_id', 'id');
     }
 }

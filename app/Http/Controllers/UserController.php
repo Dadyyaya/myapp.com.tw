@@ -25,8 +25,10 @@ class UserController extends Controller
             echo $user->all();
         }
     }
-    public function getUserById()
+    public function getUserById($id)
     {
+        $users = \App\User::with('userInfo')->find($id);
+        echo $users;
         
     }
 }
