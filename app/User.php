@@ -33,6 +33,6 @@ class User extends Authenticatable
 
     public function UserInfo()
     {
-        return $this->hasOne('App\UserInfo');
+        return $this->hasOne('App\UserInfo', 'foregin_key', 'local_key');
     }
 }
