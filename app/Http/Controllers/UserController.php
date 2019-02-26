@@ -24,6 +24,8 @@ class UserController extends Controller
                     ->where('id', $id)
                     ->first();
 
-        dd($user->toArray());
+        return view('user/example', [
+            'user' => $user,
+        ]);
     }
 }
