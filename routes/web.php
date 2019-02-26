@@ -34,10 +34,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 // 取得所有user資料  https://myapp.com.tw/users
 Route::get('/users', 'UserController@index');
 
-// 取得所有user info資料  https://myapp.com.tw/user-info
-Route::get('/user-info', 'UserController@userInfo');
 
 // 取得單一user https://myapp.com.tw/user/{編號}
 Route::get('/user/{id}', 'UserController@getUserById');
+
+Route::get('/example', 'ExampleController@index')->name('example');
 
 

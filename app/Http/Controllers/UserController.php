@@ -10,25 +10,20 @@ class UserController extends Controller
     public function index()
     {
         // TODO: 要取的model要看清楚，變數也盡量定義清楚，不要搞混你自己要取得的資料
-        $users = \App\User::all();
+        $users = User::with('userInfo')->get();
 
         // TODO: 大小括號都要左右對好，不能多也不能少
-        foreach ($users as $user) {
-            echo $user->all();
-        }
+        return view('user.index', [
+            'users' => $users,
+        ]);
     }
-    public function userInfo()
-    {
-        $users = \App\UserInfo::all();
 
-        foreach ($users as $user) {
-            echo $user->all();
-        }
-    }
     public function getUserById($id)
     {
-        $users = \App\User::with('userInfo')->find($id);
-        echo $users;
-        
+        $user = User::with('userInfo')
+                    ->where('id', $id)
+                    ->first();
+
+        dd($user->toArray());
     }
 }
