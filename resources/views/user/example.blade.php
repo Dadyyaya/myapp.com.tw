@@ -46,7 +46,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text">@</span>
               </div>
-              <input type="text" class="form-control" id="username" placeholder={{$user->name}} required="">
+              <input type="text" class="form-control" id="username" placeholder="請填入姓名" value="{{$user->name}}">
               <div class="invalid-feedback" style="width: 100%;">
                 Your username is required.
               </div>
@@ -55,7 +55,7 @@
 
         <div class="mb-3">
           <label for="email">Email <span class="text-muted">(Optional)</span></label>
-          <input type="email" class="form-control" id="email" placeholder={{$user->email}}>
+          <input type="email" class="form-control" id="email" placeholder="請填入Email" value="{{$user->email}}">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
@@ -63,7 +63,7 @@
 
         <div class="mb-3">
           <label for="address">Address</label>
-          <input type="value" class="form-control" id="address" placeholder={{$user->userInfo->address}} required>
+          <input type="value" class="form-control" id="address" placeholder="請填入地址" value="{{$user->userInfo->address}}">
           <div class="invalid-feedback">
             Please enter your shipping address.
           </div>

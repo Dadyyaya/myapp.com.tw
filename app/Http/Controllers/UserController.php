@@ -24,7 +24,8 @@ class UserController extends Controller
                     ->where('id', $id)
                     ->first();
 
-        return view('user/example', [
+        // TODO: 就點來區分即可
+        return view('user.example', [
             'user' => $user,
         ]);
     }
